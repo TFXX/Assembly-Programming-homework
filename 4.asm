@@ -1,0 +1,19 @@
+ASSUME CS:c_seg
+c_seg SEGMENT
+start:
+PUSH DX
+CMP BX, AX
+JL L1
+MOV DX, BX
+MOV BX, AX
+MOV AX, DX
+L1:
+CMP AX, CX
+JL L2
+MOV DX, AX
+MOV AX, CX
+MOV CX, DX
+L2:
+POP DX
+c_seg ENDS
+END start

@@ -1,0 +1,14 @@
+.model small
+
+.code
+
+START:
+MOV BX, 01H
+MOV AX, BX
+MOV CL, 08H
+L1:
+SHL BX, 01H
+ADD AX, BX
+LOOP L1
+
+END START

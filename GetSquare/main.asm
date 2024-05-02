@@ -1,0 +1,12 @@
+.model small
+
+.code
+
+START:
+
+SAR AX, 04H
+MOV BL, AL
+IMUL BL
+MOV BX, AX
+
+END START

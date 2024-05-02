@@ -1,0 +1,11 @@
+c_seg SEGMENT
+ASSUME CS:c_seg
+start: MOV CX, 8
+MOV BX, 0
+L1: TEST AX, 01H
+JZ L2
+INC BX
+L2: SHR
+LOOP L1;
+c_seg ENDS
+END start

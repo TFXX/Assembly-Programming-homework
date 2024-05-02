@@ -1,0 +1,12 @@
+.model small
+
+.code
+
+START:
+MOV AH, 0H
+INT 16H
+MOV DL, AL
+MOV AH, 02H
+INT 21H
+
+END START
